@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <title>OddBall Test App</title>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+   
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+    <script src="style.js"></script>
+</head>
+<body>
+    <div id="contenitore">
+        <div id="session_block">
+            <label for="name">Inserisci il nome utente che ti identificherà durante il test</label>
+            <input type="text" id="name" name="name" placeholder="Nome Utente"/>
+            <button type="submit" class="form-submit-button" disabled>Conferma</button>
+        </div>
+        <div id="userBox" style="display: none;">
+            <span class="material-symbols-outlined">person_check</span>
+            <span id="userNameDisplay"></span>
+        </div>
+        <div id="runBox" style="display: none;">
+            <p id="instructions"> 
+                Il test consiste in 5 sequenze di immagini composte ognuna da 10 foto. <br>
+             </p>
+            <button type="submit" class="run-test-button" disabled>Inizia il test</button>
+        </div>
+        <div id="intermediateParagraph" style="display: none;">
+            <p id="start-sequence">Inizio sequenza...</p>
+        </div>
+        <div id="intermediateButton" style="display: none;">
+            <button type="submit" class="run-sequence-button">Prossima sequenza</button>
+        </div>
+        <div id="testBox" style="display: none;">
+            <img id="dynamicImage" src="Immagini/1/Cucina1.jpg" alt="Dynamic Image">
+        </div>
+        <div id="finalBox">
+            <div id="finalParagraph" style="display: none;">
+                <p id="end-sequence">Test completato!</p>
+            </div>
+            <div id="resultParagraph" style="display: none;"> 
+                <p id="result-sequence"></p>
+            </div>
+            <div id="legendParagraph" style="display: none;"> 
+                <p id="legend-sequence"></p>
+            </div>
+            <div id="chart" style="display: none;">
+                <canvas id="p300Chart"></canvas>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
